@@ -1,5 +1,12 @@
+/*
+*	Game by Bader Abdulwaseem
+*		
+*	Version 2
+*
+*
+*
+*/
 import java.util.Scanner;
-
 
 public class RPSGame {
 	public static void main(String[] args) {
@@ -15,50 +22,97 @@ public class RPSGame {
 		choicePlayerOne = keyboard.nextLine();
 		System.out.print("Player 2, please make your choice: ");
 		choicePlayerTwo = keyboard.nextLine();
-
-		if ((VALID_INPUTS.indexOf(choicePlayerOne) == -1) || (VALID_INPUTS.indexOf(choicePlayerTwo) == -1))
+		
+		// This is the entire logic behind the victory conditions	
+		switch (choicePlayerOne)
 		{
-			System.out.println("That is not valid, please enter either R, P, or S!");
+		case "R":
+			if (choicePlayerTwo.equals("P") || choicePlayerTwo.equals("p"))
+			{
+				System.out.print("Player Two wins!");
+			}
+			else if (choicePlayerTwo.equals("S") || choicePlayerTwo.equals("s"))
+			{
+				System.out.print("Player One wins!");
+			}
+			else if (choicePlayerTwo.equals("R") || choicePlayerTwo.equals("r"))
+			{
+				System.out.print("Draw!");
+			}
+			break;
+		case "r":
+			if (choicePlayerTwo.equals("P") || choicePlayerTwo.equals("p"))
+			{
+				System.out.print("Player Two wins!");
+			}
+			else if (choicePlayerTwo.equals("S") || choicePlayerTwo.equals("s"))
+			{
+				System.out.print("Player One wins!");
+			}
+			else if (choicePlayerTwo.equals("R") || choicePlayerTwo.equals("r"))
+			{
+				System.out.print("Draw!");
+			}
+			break;
+		case "P":
+			if (choicePlayerTwo.equals("P") || choicePlayerTwo.equals("p"))
+			{
+				System.out.print("Draw!");
+			}
+			else if (choicePlayerTwo.equals("S") || choicePlayerTwo.equals("s"))
+			{
+				System.out.print("Player Two wins!");
+			}
+			else if (choicePlayerTwo.equals("R") || choicePlayerTwo.equals("r"))
+			{
+				System.out.print("Player One wins!");
+			}
+			break;
+		case "p":
+			if (choicePlayerTwo.equals("P") || choicePlayerTwo.equals("p"))
+			{
+				System.out.print("Draw!");
+			}
+			else if (choicePlayerTwo.equals("S") || choicePlayerTwo.equals("s"))
+			{
+				System.out.print("Player Two wins!");
+			}
+			else if (choicePlayerTwo.equals("R") || choicePlayerTwo.equals("r"))
+			{
+				System.out.print("Player One wins!");
+			}
+			break;
+		case "S":
+			if (choicePlayerTwo.equals("P") || choicePlayerTwo.equals("p"))
+			{
+				System.out.print("Player One wins!");
+			}
+			else if (choicePlayerTwo.equals("S") || choicePlayerTwo.equals("s"))
+			{
+				System.out.print("Draw!");
+			}
+			else if (choicePlayerTwo.equals("R") || choicePlayerTwo.equals("r"))
+			{
+				System.out.print("Player Two wins!");
+			}
+			break;
+		case "s":
+			if (choicePlayerTwo.equals("P") || choicePlayerTwo.equals("p"))
+			{
+				System.out.print("Player One wins!");
+			}
+			else if (choicePlayerTwo.equals("S") || choicePlayerTwo.equals("s"))
+			{
+				System.out.print("Draw!");
+			}
+			else if (choicePlayerTwo.equals("R") || choicePlayerTwo.equals("r"))
+			{
+				System.out.print("Player Two wins!");
+			}
+		default:
+			System.out.print("Sorry, the input must be R P or S!");
 		}
 		
-		if ((choicePlayerOne.equals("R") || choicePlayerOne.equals("r")) && (choicePlayerTwo.equals("R") || choicePlayerTwo.equals("r")))
-		{
-			System.out.print("Draw!");
-		}
-		else if ((choicePlayerOne.equals("P") || choicePlayerOne.equals("p")) && (choicePlayerTwo.equals("P") || choicePlayerTwo.equals("p")))
-		{
-			System.out.print("Draw!");
-		}
-		else if ((choicePlayerOne.equals("S") || choicePlayerOne.equals("s")) && (choicePlayerTwo.equals("S") || choicePlayerTwo.equals("s")))
-		{
-			System.out.print("Draw!");
-		}
-		// Player 1 Victories after this point
-		else if ((choicePlayerOne.equals("R") || choicePlayerOne.equals("r")) && (choicePlayerTwo.equals("S") || choicePlayerTwo.equals("s")))
-		{
-			System.out.print("Player 1 wins!");
-		}
-		else if ((choicePlayerOne.equals("P") || choicePlayerOne.equals("p")) && (choicePlayerTwo.equals("R") || choicePlayerTwo.equals("r")))
-		{
-			System.out.print("Player 1 wins!");
-		}
-		else if ((choicePlayerOne.equals("S") || choicePlayerOne.equals("s")) && (choicePlayerTwo.equals("P") || choicePlayerTwo.equals("p")))
-		{
-			System.out.print("Player 1 wins!");
-		}
-		// Player 2 Victories
-		else if ((choicePlayerOne.equals("S") || choicePlayerOne.equals("s")) && (choicePlayerTwo.equals("R") || choicePlayerTwo.equals("r")))
-		{
-			System.out.print("Player 2 wins!");
-		}
-		else if ((choicePlayerOne.equals("R") || choicePlayerOne.equals("r")) && (choicePlayerTwo.equals("P") || choicePlayerTwo.equals("p")))
-		{
-			System.out.print("Player 2 wins!");
-		}
-		else if ((choicePlayerOne.equals("P") || choicePlayerOne.equals("p")) && (choicePlayerTwo.equals("S") || choicePlayerTwo.equals("s")))
-		{
-			System.out.print("Player 2 wins!");
-		}
 	}
 		
 }
